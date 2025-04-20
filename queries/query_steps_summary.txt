@@ -1,0 +1,65 @@
+✅ PART 1: Import and Initial Setup
+Loaded bank_reviews3.csv using Get Data → From CSV
+
+Promoted headers, set correct data types
+
+Renamed query to Bank_Reviews_Raw
+
+Saved as Connection Only
+
+✅ PART 2: Cleaning & Preparation
+Duplicated query → renamed to Bank_Reviews_Cleaned
+
+Removed nulls from critical columns
+
+Trimmed unnecessary spaces
+
+Replaced "N/A" or blank values in Customer_Location with "Unknown"
+
+Split Review_Title by first space → Title_Tag, Title_Headline
+
+Saved as Connection Only
+
+✅ PART 3: Feature Engineering
+Created Review_Length using Text.Length([Review])
+
+Added Review_Sentiment using conditional logic
+
+Extracted year from Review_Date
+
+Created city_bank by combining city and bank names
+
+(Ensured correct data types)
+
+✅ PART 4: Advanced Transformations
+Duplicated query → Bank_Reviews_Final
+
+Cleaned column names (e.g., Review.Length → Review_Length)
+
+Added custom logic (e.g., "Detailed" vs "Short" reviews)
+
+Calculated Impact_Score (e.g., rating × useful_count)
+
+Skipped merge, unpivot, transpose, and split-rows (since not applicable)
+
+✅ PART 5: Upload & Save
+Loaded Bank_Reviews_Final to worksheet
+
+Saved output as cleaned_reviews.xlsx inside /transformed/
+
+✅ PART 6: Folder Import + Function
+Imported a folder of review files
+
+Power Query auto-created:
+
+Transform Sample File
+
+Function
+
+Combined query (review_files)
+
+Applied same logic from Bank_Reviews_Cleaned to Transform Sample File
+
+Renamed review_files to All_Bank_Reviews_Combined
+
+Loaded to worksheet → saved as combined_reviews.xlsx
